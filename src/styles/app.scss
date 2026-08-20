@@ -13,6 +13,29 @@
 
 .hero-content {
     text-align: center;
+    padding: 64px 20px;
+}
+
+.hero-button {
+  border: 1px solid;
+  border-radius: 28px;
+  width: 311px;
+  display: block;
+  justify-self: center;
+  padding: 8px 24px;
+
+}
+
+.input-text {
+  text-align: left;
+}
+
+input {
+  border:0;
+  outline:0;}
+
+input:focus {
+  outline:none!important;
 }
 
 //typography

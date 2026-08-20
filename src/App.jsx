@@ -19,17 +19,21 @@ function App() {
         </picture>
         <div className="hero-content">
           <h2 className="title-first">WE'RE</h2>
-          <h2 className="title-second">COMING <br></br> SOON</h2>
+          <h2 className="title-second">
+            COMING <br></br> SOON
+          </h2>
           <p className="text-description">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
-            and our launch deals. Email Address
+            and our launch deals.
           </p>
           <form>
-            <input type="email" placeholder="Email Address" required></input>
-            <button type="submit">
-              <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
-            </button>
+            <div className="hero-button">
+              <input type="email" placeholder="Email Address" className="input-text"required></input>
+              <button type="submit">
+                <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
+              </button>
+            </div>
           </form>
         </div>
       </div>
