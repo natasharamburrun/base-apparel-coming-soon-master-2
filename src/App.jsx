@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.scss"
+import "./styles/app.scss"
 
 function App() {
     return (
@@ -17,18 +17,21 @@ function App() {
             className="hero-images"
           />
         </picture>
-        <div>
-          <h2>We're</h2> <h2>coming soon</h2>
-          <p>
+        <div className="hero-content">
+          <h2 className="title-first">WE'RE</h2>
+          <h2 className="title-second">COMING <br></br> SOON</h2>
+          <p className="text-description">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
             and our launch deals. Email Address
           </p>
+          <form>
+            <input type="email" placeholder="Email Address" required></input>
+            <button type="submit">
+              <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
+            </button>
+          </form>
         </div>
-        <form>
-          <input type="email" placeholder="Email Address" required></input>
-          <button type="submit"><img src="./images/icon-arrow.svg" alt="icon arrow"></img></button>
-        </form>
       </div>
     );
 }

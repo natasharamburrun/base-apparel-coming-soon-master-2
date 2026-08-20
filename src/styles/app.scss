@@ -1,0 +1,80 @@
+.heading {
+    color: red;
+}
+
+.logo {
+    padding: 32px;
+}
+
+.hero-images {
+    display: block;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+//typography
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0.45px;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: 0.36px;
+}
+
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0.29px;
+}
+
+p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+// Colour
+
+$base-black: #000000;
+$base-white: #FFFFFF;
+$base-grey :#423A3A;
+$base-red: #F96464;
+$base-pink: #CE9898;
+
+$gradient-1: #F8BFBF;
+$gradient-11: #EE8B8B;
+
+$gradient-2: #FFFFFF;
+$gradient-21: #FFF4F4;
+
+$gradient-3: #FFF1F1;
+$gradient-31: #FFFFFF;
+
+
+
+
+
+
+// .title-first {
+// }
+
+// .title-second {
+
+// }
+
+// .text-description {
+
+// }
