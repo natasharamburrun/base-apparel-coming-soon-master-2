@@ -112,21 +112,26 @@ button {
   position: absolute;
   right: 0;
   background: linear-gradient(to right, $gradient-1, $gradient-11);
-
 }
 
+@media (min-width: 799px) {
+  .coming-soon {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  }
 
+  .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .content {
+    grid-column: 2;
+    grid-row: 1;
+  }
 
-
-
-
-// .title-first {
-// }
-
-// .title-second {
-
-// }
-
-// .text-description {
-
-// }
+  .hero-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

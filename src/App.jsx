@@ -7,16 +7,20 @@ function App() {
         <div className="logo">
           <img src="./images/logo.svg" alt="logo"></img>
         </div>
-
-        <picture>
-          <source media="(width < 769px)" srcSet="images/hero-mobile.jpg" />
-          <source media="(width >= 769px)" srcSet="./images/hero-desktop.jpg" />
-          <img
-            src="./images/hero-desktop.jpg"
-            alt="lady in an orange shirt holding her hand to her face"
-            className="hero-images"
-          />
-        </picture>
+        <div className="content">
+          <picture>
+            <source media="(width < 769px)" srcSet="images/hero-mobile.jpg" />
+            <source
+              media="(width >= 769px)"
+              srcSet="./images/hero-desktop.jpg"
+            />
+            <img
+              src="./images/hero-desktop.jpg"
+              alt="lady in an orange shirt holding her hand to her face"
+              className="hero-images"
+            />
+          </picture>
+        </div>
         <div className="hero-content">
           <h2 className="title-first">WE'RE</h2>
           <h2 className="title-second">
@@ -29,7 +33,12 @@ function App() {
           </p>
           <form>
             <div className="hero-button">
-              <input type="email" placeholder="Email Address" className="input-text"required></input>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="input-text"
+                required
+              ></input>
               <button type="submit">
                 <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
               </button>
