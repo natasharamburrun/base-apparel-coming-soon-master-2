@@ -3,7 +3,7 @@ import "./styles/app.scss"
 
 function App() {
     return (
-      <div>
+      <div className="coming-soon">
         <div className="logo">
           <img src="./images/logo.svg" alt="logo"></img>
         </div>

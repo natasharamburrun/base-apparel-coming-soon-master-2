@@ -1,5 +1,52 @@
-.heading {
-    color: red;
+// Colour
+
+$base-black: #000000;
+$base-white: #FFFFFF;
+$base-grey :#423A3A;
+$base-red: #F96464;
+$base-pink: #CE9898;
+
+$gradient-1: #F8BFBF;
+$gradient-11: #EE8B8B;
+
+$gradient-2: #FFFFFF;
+$gradient-21: #FFF4F4;
+
+$gradient-3: #FFF1F1;
+$gradient-31: #FFFFFF;
+
+//typography
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.coming-soon {
+  background: linear-gradient(to right, $gradient-2, $gradient-21);
+  font-family: "Josefin Sans", sans-serif;
+
+}
+
+.title-first {
+  color: $base-pink;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 10px;
+  margin: auto;
+}
+
+.title-second {
+  color: $base-black;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin: auto;
+}
+
+.text-description {
+  color: $base-pink;
+  font-size: 14px;
+  line-height: 115%;
+  margin: auto;
 }
 
 .logo {
@@ -28,63 +75,19 @@
 
 .input-text {
   text-align: left;
+  background: linear-gradient(to right, $gradient-2, $gradient-21);
 }
 
 input {
   border:0;
-  outline:0;}
+  outline:0;
+}
 
 input:focus {
   outline:none!important;
 }
 
-//typography
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-h1 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
-  letter-spacing: 0.45px;
-}
-
-h2 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 40px;
-  line-height: 42px;
-  letter-spacing: 0.36px;
-}
-
-h3 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 0.29px;
-}
-
-p {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
-  line-height: 30px;
-}
-
-// Colour
-
-$base-black: #000000;
-$base-white: #FFFFFF;
-$base-grey :#423A3A;
-$base-red: #F96464;
-$base-pink: #CE9898;
-
-$gradient-1: #F8BFBF;
-$gradient-11: #EE8B8B;
-
-$gradient-2: #FFFFFF;
-$gradient-21: #FFF4F4;
-
-$gradient-3: #FFF1F1;
-$gradient-31: #FFFFFF;
 
 
 
