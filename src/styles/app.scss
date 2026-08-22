@@ -19,11 +19,25 @@ $gradient-31: #FFFFFF;
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+// Global settings
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+//Styling
 
 .coming-soon {
   background: linear-gradient(to right, $gradient-2, $gradient-21);
   font-family: "Josefin Sans", sans-serif;
-
 }
 
 .title-first {
@@ -98,6 +112,7 @@ $gradient-31: #FFFFFF;
 input {
   border:0;
   outline:0;
+  width: 100%;
 }
 
 input:focus {
@@ -111,27 +126,59 @@ button {
   height: 49px;
   position: absolute;
   right: 0;
+  top: -1px;
   background: linear-gradient(to right, $gradient-1, $gradient-11);
 }
 
-@media (min-width: 799px) {
+@media (min-width: 769px) {
   .coming-soon {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-  gap: 20px;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    max-width: 1440px;
+    max-height: 800px;
   }
 
   .logo {
     grid-column: 1;
     grid-row: 1;
+    padding: 80px 130px;
   }
   .content {
     grid-column: 2;
     grid-row: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .hero-content {
     grid-column: 1;
     grid-row: 1;
+    padding: 136px;
+    text-align: left;
+
+  }
+
+  .title-first{
+    margin: 0;
+    padding-top: 132px;
+  }
+
+  .title-second{
+    margin: 0;
+  }
+
+  .text-description {
+    text-align: left;
+  }
+
+  .hero-images {
+    max-width: 610px;
+    max-height: 800px;
+  }
+
+  .hero-button {
+    justify-self: flex-start;
+    width: 445px;
   }
 }
