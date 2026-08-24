@@ -2,6 +2,16 @@ import { useState } from "react";
 import "./styles/app.scss"
 
 function App() {
+const [email, setEmail] = useState("");
+
+function handleChange(e) {
+  setEmail(e.target.value);
+}
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
     return (
       <div className="coming-soon">
         <div className="logo">
@@ -9,13 +19,16 @@ function App() {
         </div>
         <div className="content">
           <picture>
-            <source media="(width < 769px)" srcSet="images/hero-mobile.jpg" />
             <source
-              media="(width >= 769px)"
-              srcSet="./images/hero-desktop.jpg"
+              media="(max-width: 768px)"
+              srcSet="images/hero-mobile.jpg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcSet="/images/hero-desktop.jpg"
             />
             <img
-              src="./images/hero-desktop.jpg"
+              src="/images/hero-desktop.jpg"
               alt="lady in an orange shirt holding her hand to her face"
               className="hero-images"
             />
@@ -31,13 +44,15 @@ function App() {
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="hero-button">
               <input
                 type="email"
                 placeholder="Email Address"
                 className="input-text"
                 required
+                onChange={handleChange}
+                value={email}
               ></input>
               <button type="submit">
                 <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
