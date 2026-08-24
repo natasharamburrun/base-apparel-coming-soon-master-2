@@ -3,13 +3,20 @@ import "./styles/app.scss"
 
 function App() {
 const [email, setEmail] = useState("");
-
-function handleChange(e) {
+const [error, setError] = useState({});
+ 
+const handleChange = (e) => {
   setEmail(e.target.value);
 }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (!email) {
+    setError({ email: "Email is required" });
+    return false;
+  }
+    setError({});
+    return true;
   }
 
     return (
@@ -50,10 +57,10 @@ function handleChange(e) {
                 type="email"
                 placeholder="Email Address"
                 className="input-text"
-                required
                 onChange={handleChange}
                 value={email}
               ></input>
+              {error.email && <p>{error.email}</p>}
               <button type="submit">
                 <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
               </button>
