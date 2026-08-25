@@ -12,7 +12,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
   e.preventDefault();
   if (!email) {
-    setError({ email: "Email is required" });
+    setError({ email: "Please provide a valid email" });
     return false;
   }
     setError({});
@@ -60,7 +60,16 @@ const handleSubmit = (e) => {
                 onChange={handleChange}
                 value={email}
               ></input>
-              {error.email && <p>{error.email}</p>}
+              {error.email && (
+                <div className="error-handling">
+                  <img
+                    src="/images/icon-error.svg"
+                    alt="error icon"
+                    className="icon-error"
+                  />
+                  <p className="error-warning">{error.email}</p>
+                </div>
+              )}
               <button type="submit">
                 <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
               </button>
