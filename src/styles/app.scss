@@ -156,9 +156,9 @@ button {
   .coming-soon {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    gap: 20px;
     max-width: 1440px;
     max-height: 800px;
+    gap: 20px;
   }
 
   .logo {
@@ -178,8 +178,13 @@ button {
     grid-row: 1;
     padding: 136px;
     text-align: left;
-
   }
+
+  .hero-images {
+    min-width: 610px;
+    min-height: 800px;
+    object-fit: cover;
+}
 
   .title-first{
     margin: 0;
@@ -192,11 +197,6 @@ button {
 
   .text-description {
     text-align: left;
-  }
-
-  .hero-images {
-    // max-width: 610px;
-    // max-height: 800px;
   }
 
   .hero-button {
