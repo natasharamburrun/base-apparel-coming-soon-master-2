@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./styles/app.scss"
 
+import logo from "./images/logo.svg";
+import heroDesktop from "./images/hero-desktop.jpg";
+import heroMobile from "./images/hero-mobile.jpg";
+import iconError from "./images/icon-error.svg";
+import iconArrow from"./images/icon-arrow.svg";
+
 function App() {
 const [email, setEmail] = useState("");
 const [error, setError] = useState({});
@@ -22,20 +28,14 @@ const handleSubmit = (e) => {
     return (
       <div className="coming-soon">
         <div className="logo">
-          <img src="./images/logo.svg" alt="logo"></img>
+          <img src={logo} alt="logo" />
         </div>
         <div className="content">
           <picture>
-            <source
-              media="(max-width: 768px)"
-              srcSet="images/hero-mobile.jpg"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcSet="/images/hero-desktop.jpg"
-            />
+            <source media="(max-width: 768px)" srcSet={heroMobile} />
+            <source media="(min-width: 769px)" srcSet={heroDesktop} />
             <img
-              src="/images/hero-desktop.jpg"
+              srcSet={heroDesktop}
               alt="lady in an orange shirt holding her hand to her face"
               className="hero-images"
             />
@@ -62,16 +62,12 @@ const handleSubmit = (e) => {
               ></input>
               {error.email && (
                 <div className="error-handling">
-                  <img
-                    src="/images/icon-error.svg"
-                    alt="error icon"
-                    className="icon-error"
-                  />
+                  <img src={iconError} alt="icon error" className="icon-error" />
                   <p className="error-warning">{error.email}</p>
                 </div>
               )}
               <button type="submit">
-                <img src="./images/icon-arrow.svg" alt="icon arrow"></img>
+                <img src={iconArrow} alt="icon arrow"></img>
               </button>
             </div>
           </form>
