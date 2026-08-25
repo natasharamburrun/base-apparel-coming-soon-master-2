@@ -156,7 +156,6 @@ button {
   .coming-soon {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    gap: 20px;
     max-width: 1440px;
     max-height: 800px;
   }
@@ -195,8 +194,8 @@ button {
   }
 
   .hero-images {
-    // max-width: 610px;
-    // max-height: 800px;
+    min-width: 610px;
+    min-height: 800px;
   }
 
   .hero-button {
